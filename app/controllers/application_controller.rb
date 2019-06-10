@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
   get '/account' do
     binding.pry
     @current_user = User.find_by(id: session[:user_id])
-    if @current_user.id == session[:user_id] 
+    if @current_user
       erb :account
     else 
       erb :failure
