@@ -25,6 +25,7 @@ class ApplicationController < Sinatra::Base
     if @current_user
       erb :account
     else 
+      binding.pry
       erb :failure
     end 
     
