@@ -25,7 +25,6 @@ class ApplicationController < Sinatra::Base
     if @current_user.id == session[:user_id] 
       erb :account
     else 
-      binding.pry
       erb :failure
     end 
     
